@@ -1,0 +1,1 @@
+const links=[...document.querySelectorAll('.nav nav a')];const sections=[...document.querySelectorAll('main section[id]')];window.addEventListener('scroll',()=>{let y=scrollY+100;let current=sections.reduce((a,s)=>s.offsetTop<=y?s:a,sections[0]);links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+current.id));});
